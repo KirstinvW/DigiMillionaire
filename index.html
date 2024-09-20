@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Wants to Be a Millionaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .game-container {
+            width: 70%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text visibility */
+            border-radius: 15px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .answers button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            width: 60%;
+            background-color: #444;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .answers button:hover {
+            background-color: #777;
+        }
+        .prize-ladder {
+            margin-top: 20px;
+        }
+    </style>
+    <!-- Load Fireworks.js Library -->
+    <script src="https://cdn.jsdelivr.net/gh/crashmax-dev/fireworks-js/dist/fireworks.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Who Wants to Be a DigiMillionaire?</h1>
+        <div class="question" id="question">Question will go here</div>
+        <div class="answers">
+            <button id="answerA" onclick="chooseAnswer('A')">A. Option 1</button>
+            <button id="answerB" onclick="chooseAnswer('B')">B. Option 2</button>
+            <button id="answerC" onclick="chooseAnswer('C')">C. Option 3</button>
+            <button id="answerD" onclick="chooseAnswer('D')">D. Option 4</button>
+        </div>
+        <div class="prize-ladder">
+            Prize: <span id="prize">R0</span>
+        </div>
+    </div>
+
+    <!-- Link to your script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
